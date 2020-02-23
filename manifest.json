@@ -2,5 +2,12 @@
   "name": "Make Medium Readable Again",
   "version": "1.0",
   "description": "Make Medium readable again...",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "manifest_version": 2
 }
