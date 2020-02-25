@@ -1,4 +1,4 @@
-const removeHeader = () => {
+const removeNav = () => {
   const valuable = document.querySelector('article')
 
   if (!valuable) {
@@ -15,18 +15,11 @@ const removeHeader = () => {
   }
 }
 
-const removePardon = () => {
-  const trashHeadings = document.evaluate(
-    "//h1[contains(., 'Pardon the interruption.')]",
-    document,
-    null,
-    XPathResult.ANY_TYPE,
-    null,
-  )
-  const trashHeading = trashHeadings.iterateNext()
-  if (trashHeading) {
-    var trash = trashHeading.parentNode.parentNode.parentNode.parentNode
-    trashshit.parentNode.removeChild(trash)
+const removePopup = () => {
+  const trashPopup = document.querySelector('#susi-entry-point-post_prompt')
+  if (trashPopup) {
+    const closeButton = trashPopup.previousSibling.querySelector('button')
+    closeButton.click()
   }
 }
 
@@ -35,6 +28,6 @@ const isMedium = document.querySelector(
 )
 
 if (isMedium) {
-  removeHeader()
-  removePardon()
+  removeNav()
+  removePopup()
 }
