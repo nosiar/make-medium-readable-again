@@ -1,13 +1,7 @@
 const removeNav = () => {
-  const valuable = document.querySelector('article')
-
-  if (!valuable) {
-    alert('my assumption was wrong..')
-  }
-
-  const garbage = valuable.previousSibling
+  const garbage = document.querySelector('nav')
   if (garbage) {
-    const garbage2 = garbage.previousSibling
+    const garbage2 = garbage.nextSibling
     if (garbage2) {
       garbage2.parentNode.removeChild(garbage2)
     }
@@ -20,7 +14,10 @@ const removePopup = () => {
   if (trashPopup) {
     const closeButton = trashPopup.previousSibling.querySelector('button')
     closeButton.click()
+
+    console.log('[MMRA] cleared')
   }
+  //const trashPopup = document.querySelector('#susi-modal-background')
 }
 
 const isMedium = document.querySelector(
