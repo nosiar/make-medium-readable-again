@@ -20,9 +20,17 @@ const removePopup = () => {
   //const trashPopup = document.querySelector('#susi-modal-background')
 }
 
+const removeGoogleLoginPopup = () => {
+  const junk = document.querySelector('#credential_picker_container')
+  if (junk) {
+    junk.parentNode.removeChild(junk)
+  }
+}
+
 const observer = new MutationObserver((mutations) =>
   mutations.forEach(() => {
     removePopup()
+    removeGoogleLoginPopup()
     removeNav()
   }),
 )
@@ -34,4 +42,5 @@ const isMedium = document.querySelector(
 if (isMedium) {
   removeNav()
   removePopup()
+  removeGoogleLoginPopup()
 }
