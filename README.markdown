@@ -5,3 +5,8 @@
 ## 설치
 
 저장소를 다운 받은 뒤 `chrome://extensions/` 에서 Developer mode를 켜고 `Load unpacked` 합니다.
+
+## 기능
+
+- 상단 고정바 제거
+- 각종 로그인 팝업 제거
