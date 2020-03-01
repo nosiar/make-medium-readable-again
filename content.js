@@ -20,6 +20,13 @@ const removePopup = () => {
   //const trashPopup = document.querySelector('#susi-modal-background')
 }
 
+const observer = new MutationObserver((mutations) =>
+  mutations.forEach(() => {
+    removePopup()
+    removeNav()
+  }),
+)
+
 const isMedium = document.querySelector(
   'head meta[property="al:ios:app_name"][content="medium" i]',
 )
