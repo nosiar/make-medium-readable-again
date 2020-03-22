@@ -39,8 +39,22 @@ const isMedium = document.querySelector(
   'head meta[property="al:ios:app_name"][content="medium" i]',
 )
 
+const removeAds = () => {
+  document.querySelectorAll('.code-block').forEach((x) => {
+    x.parentNode.removeChild(x)
+  })
+}
+
+const isBaeldung = document.querySelector(
+  'head meta[property="og:site_name"][content="Baeldung" i]',
+)
+
 if (isMedium) {
   removeNav()
   removePopup()
   removeGoogleLoginPopup()
+}
+
+if (isBaeldung) {
+  removeAds()
 }
